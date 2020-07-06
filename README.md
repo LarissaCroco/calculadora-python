@@ -5,4 +5,4 @@
 - Editor de texto (ex.: sublime)
 
 ## Modo de execução:
-- No terminal executar o comando: python calculator.py
+- No terminal executar o comando: python calculator_v2.py
