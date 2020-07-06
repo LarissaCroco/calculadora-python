@@ -3,21 +3,21 @@
 
 print('**********Python Calculator**********')
 
-print('Selecione o número da opção desejada:')
+print("\nSelecione o número da opção desejada: \n")
 
 print('1 - Soma')
 print('2 - Subtração')
 print('3 - Multiplicação')
 print('4 - Divisão')
 
-option = int(input('Digite sua opção (1/2/3/4): '))
+option = int(input("\nDigite sua opção (1/2/3/4): "))
 
 if option <= 0 or option > 4:
-    print('Opção inválida!')
+    print("\nOpção inválida!\n")
     exit(0)
 
-num1 = int(input('Digite o primeiro número: '))
-num2 = int(input('Digite o segundo número: '))
+num1 = int(input("\nDigite o primeiro número: "))
+num2 = int(input("\nDigite o segundo número: \n"))
 
 if option == 1:
     result = num1 + num2
