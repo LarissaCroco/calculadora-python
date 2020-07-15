@@ -14,7 +14,11 @@ def multiplication(x, y):
 
 
 def division(x, y):
-    return x // y
+    try:
+        return x / y
+    except ZeroDivisionError:
+        print("\nOops! Não é possível dividir por 0.")
+        exit(0)
 
 
 print('**********Python Calculator**********')
@@ -26,14 +30,34 @@ print("2 - Subtração")
 print("3 - Multiplicação")
 print("4 - Divisão")
 
-option = int(input("\nDigite sua opção (1/2/3/4): "))
+while True:
+    try:
+        option = int(input("\nDigite sua opção (1/2/3/4): "))
+        break
+
+    except ValueError:
+        print("\nOops! Não é uma opção válida.  Tente novamente")
+
 
 if option <= 0 or option > 4:
     print("\nOpção inválida!\n")
     exit(0)
 
-num1 = int(input("\nDigite o primeiro número: "))
-num2 = int(input("\nDigite o segundo número: "))
+while True:
+    try:
+        num1 = float(input("\nDigite o primeiro número: "))
+        break
+
+    except ValueError:
+        print("\nOops! Não é um número inteiro.  Tente novamente")
+
+while True:
+    try:
+        num2 = float(input("\nDigite o segundo número: "))
+        break
+
+    except ValueError:
+        print("\nOops! Não é um número inteiro.  Tente novamente")
 
 if option == 1:
     print(num1, "+", num2, "=", addition(num1, num2))
